@@ -1,8 +1,6 @@
 import numpy as np
 import cv2 as cv
 from matplotlib import pyplot as plt
-import sys
-
 
 def display(title, img):
     cv.imshow(title, img)
@@ -164,11 +162,20 @@ img3, img4 = drawlines(img2, img1, lines2, pts2, pts1, colors, fundamental_matri
 display("Epilines", np.hstack((img5, img3)))
 # print(fundamental_matrix)
 # ------------------------------------------------------------
+# ------------------------------------------------------------
+# ------------------------------------------------------------
 
-# Stereo rectification (uncalibrated variant)
-# Adapted from: https://stackoverflow.com/a/62607343
-h1, w1 = img1.shape
-h2, w2 = img2.shape
+origImg1=img1.copy()
+origImg2=img2.copy()
+
+#Image sizes:
+WIDTH1=img1.shape[1]
+HEIGHT1=img1.shape[0]
+
+WIDTH2=img2.shape[1]
+HEIGHT2=img2.shape[0]
+
+h1, w1, h2, w2 = HEIGHT1, WIDTH1, HEIGHT2, WIDTH2
 _, H1, H2 = cv.stereoRectifyUncalibrated(np.float32(pts1), np.float32(pts2), fundamental_matrix, imgSize=(w1, h1))
 
 # Undistort (rectify) the images and save them
@@ -198,4 +205,3 @@ axes[1].axhline(750)
 plt.suptitle("Rectified images")
 plt.savefig("rectified_images.png")
 plt.show()
-
