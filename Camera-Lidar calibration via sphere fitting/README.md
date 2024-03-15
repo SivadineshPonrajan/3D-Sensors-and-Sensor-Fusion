@@ -4,8 +4,16 @@
 The following paper was implemented from the scratch.
 
 ```
-T. Tóth, Z. Pusztai and L. Hajder, "Automatic LiDAR-Camera Calibration of Extrinsic Parameters Using a Spherical Target," 2020 IEEE International Conference on Robotics and Automation (ICRA), Paris, France, 2020, pp. 8580-8586, doi: 10.1109/ICRA40945.2020.9197316. keywords: {Cameras;Calibration;Laser radar;Three-dimensional displays;Estimation;Mathematical model;Robustness},
-
+@INPROCEEDINGS{9197316,
+  author={Tóth, Tekla and Pusztai, Zoltán and Hajder, Levente},
+  booktitle={2020 IEEE International Conference on Robotics and Automation (ICRA)}, 
+  title={Automatic LiDAR-Camera Calibration of Extrinsic Parameters Using a Spherical Target}, 
+  year={2020},
+  volume={},
+  number={},
+  pages={8580-8586},
+  keywords={Cameras;Calibration;Laser radar;Three-dimensional displays;Estimation;Mathematical model;Robustness},
+  doi={10.1109/ICRA40945.2020.9197316}}
 ```
 ## How does it work
 
